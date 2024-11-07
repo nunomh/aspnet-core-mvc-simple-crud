@@ -1,0 +1,34 @@
+﻿@{
+    var message = "Hello World";
+}
+
+<p>@message</p>
+
+@{
+    var items = new List<string> { "Item1", "Item2", "Item3" };
+}
+
+<ul>
+    @foreach(var item in items)
+    {
+        <li>@item</li>
+    }
+</ul>
+
+@{
+    var isLoggedIn = true;
+}
+
+@if (isLoggedIn)
+{
+    <p>Welcome back</p>
+}
+else
+{
+    <p>Please log in</p>
+}
+
+@model aspnet_core_mvc_simple_crud.Models.Item
+@{
+}
+<p>This is the name of the item: @Model.Name</p>
